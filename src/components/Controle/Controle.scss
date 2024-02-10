@@ -3,17 +3,28 @@
 .controle {
     height: 50vh;  
     width: 100%; 
-    background-color: v.$primary-color; 
+   
 }
 
 .controle {
     display: flex; 
     justify-content: space-around; 
-    align-items: center; 
+    align-items: center;    
 }
+
+.primaryColor {
+    background-color: v.$primary-color; 
+}; 
+
+.secondColor {
+    background-color: v.$second-color; 
+}; 
+
+
 .colorButton, .fontButton, .bannerButton {
     border: 1px solid rgb(3, 33, 3); 
-    background-color: v.$second-color; 
+    background-color:black; 
+    color:white; 
     height: 5cqi; 
     border-radius: 10px; 
     width: 200px; 
