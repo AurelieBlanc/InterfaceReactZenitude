@@ -8,8 +8,8 @@ export default function Controle () {
 
             <input type="button" className="colorButton" value="Color Switch"/>
 
-            <inout type="button" className="bannerButton" value="Banner Switch"/>
-            
+            <input type="button" className="bannerButton" value="Banner Switch"/>
+
         </div>
     )
 }
