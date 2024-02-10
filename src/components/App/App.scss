@@ -1,3 +1,15 @@
 @use '@scssVariables' as v;
 
+// body {
+//     font-family: v.$second-font
+//   }
+
+.police1 {
+    font-family: v.$primary-font; 
+}
+
+.police2 {
+    font-family: v.$second-font; 
+}
+
 
