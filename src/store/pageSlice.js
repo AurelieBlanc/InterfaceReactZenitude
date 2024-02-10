@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 export const initialState = {
-    fontButton: true, 
+    fontButton: "Protest Revolution", 
     colorButton: true, 
-    bannerButton: "plantesVertes", 
+    bannerButton: true, 
 }
 
 const pageSlice = createSlice ({

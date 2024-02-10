@@ -8,14 +8,13 @@ import { useSelector } from "react-redux";
 function App() {
 
   const police = useSelector((state) => state.pageCommand.fontButton); 
-  
-  // {police ? "police1" : "police2"}
+  console.log ("le result de police est", police); 
   
   let resultPolice; 
-  if (police===true) {
-    resultPolice = "police1"
-  } else { 
-    resultPolice = "police2"
+  if (police==="Protest Revolution") {
+    resultPolice = "protestRevolution"
+  } else if(police==="Edu SA Beginner") { 
+    resultPolice = "eduSaBeginner"
   }; 
 
 

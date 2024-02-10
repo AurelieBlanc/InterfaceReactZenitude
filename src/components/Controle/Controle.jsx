@@ -1,7 +1,8 @@
 import "./Controle.scss"
 import { useDispatch, useSelector } from "react-redux"; 
-import { updatePolice, updateColor } from '../../store/pageSlice'; 
- 
+import { updatePolice, updateColor, updateBanner } from '../../store/pageSlice'; 
+//useDispatch : envoyer des actions
+//useSelector : lire et se servir des données du store
 
 export default function Controle () {
 
@@ -16,26 +17,45 @@ export default function Controle () {
         resultColor = "controle secondColor"
     }
 
-    console.log("result color:", resultColor)
+    const banner = useSelector((state) => state.pageCommand.bannerButton)
+    
+    // const police = useSelector((state) => state.pageCommand.fontButton)
+    // console.log(police)
+
+    function switchPolice(event) {
+    const selectedPolice = event.target.value
+       dispatch(updatePolice(selectedPolice))
+    }
+
+    // onChange={switchPolice} value={selectedPolice}
     
     return (
         <div className={resultColor}>
 
-            <button className="fontButton" onClick={()=>dispatch(updatePolice(true))}>Police Protest Strike</button>
+            <div className="menuPolice">
+            <label htmlFor="font-select">Choisis ta police Bébé :</label>
+            <select name="font" id="" onChange={switchPolice}  >
+                <option value="Protest Revolution">Protest Revolution</option>
+                <option value="Edu SA Beginner">Edu SA Beginner</option>
+            </select>
+            </div>
+
+            {/* <button className="fontButton" onClick={()=>dispatch(updatePolice(true))}>Police Protest Strike</button>
 
 
-            <input type="button" onClick={()=>dispatch(updatePolice(false))}className="fontButton" value="Police EDU SA Beginner"/>
+            <input type="button" onClick={()=>dispatch(updatePolice(false))}className="fontButton" value="Police EDU SA Beginner"/> */}
 
             <input type="button" className="colorButton" value="Color Switch" onClick={()=> { 
                 
                 const updatedColor = !color; 
-
-               
-                console.log("le console de oncklick", updatedColor); 
-
+                
                dispatch(updateColor(updatedColor))}}/>
 
-            <input type="button" className="bannerButton" value="Banner Switch"/>
+            <input type="button" className="bannerButton" value="Banner Switch" onClick={() => {
+                const updatedBanner = !banner; 
+
+                dispatch(updateBanner(updatedBanner))
+            }}/>
 
         </div>
     )

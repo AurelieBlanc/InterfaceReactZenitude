@@ -2,9 +2,13 @@
     height: 50vh; 
     width: 100%; 
     background-image: url('../../../public/images/tapisPlantes.jpg'); 
-    // background-image: url('../../../public/images/plantesBleues.jpg'); 
+    
     color: white; 
-    font-size: 50px; 
+    font-size: 70px; 
     text-align: center; 
     padding-top: 150px; 
+}
+
+.plantesBleues {
+    background-image: url('../../../public/images/gouttesPlantes.jpg'); 
 }
