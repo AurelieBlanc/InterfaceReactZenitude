@@ -1,6 +1,7 @@
 import './App.scss';
 import Banner from '../Banner/Banner.jsx'; 
 import Controle from "../Controle/Controle.jsx";
+import Slider from "../Slider/Slider.jsx";
 import { useSelector } from "react-redux"; 
 // pour lire les données du store : 
 
@@ -8,23 +9,20 @@ import { useSelector } from "react-redux";
 function App() {
 
   const police = useSelector((state) => state.pageCommand.fontButton); 
-  console.log ("le result de police est", police); 
   
-  let resultPolice; 
-  if (police==="Protest Revolution") {
-    resultPolice = "protestRevolution"
-  } else if(police==="Edu SA Beginner") { 
-    resultPolice = "eduSaBeginner"
-  }; 
+const appStyle = {
+  fontFamily: police
+}
 
-
-  
+console.log(appStyle); 
 
   return (
-  <div className={resultPolice} >
+  <div
+  className="App"
+   style={appStyle} >
     <Banner />
     <Controle />
-  
+    <Slider />
   </div>)
   ;
 }

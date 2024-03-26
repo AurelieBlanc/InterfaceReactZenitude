@@ -33,7 +33,7 @@ export default function Controle () {
         <div className={resultColor}>
 
             <div className="menuPolice">
-            <label htmlFor="font-select">Choisis ta police Bébé :</label>
+            <label htmlFor="font-select">Choix de la police</label>
             <select name="font" id="" onChange={switchPolice}  >
                 <option value="Protest Revolution">Protest Revolution</option>
                 <option value="Edu SA Beginner">Edu SA Beginner</option>
